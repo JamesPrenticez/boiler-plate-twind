@@ -3,11 +3,11 @@ import { Routes, Route } from "react-router-dom";
 
 import Layout from "./components/layout/Layout";
 import Loading from "./components/common/Loading";
-import About from "./pages/About";
+import Home from "./pages/Home";
 
-const Home = lazy(async () => {
+const About = lazy(async () => {
   const [moduleExports] = await Promise.all([
-    import("./pages/Home"),
+    import("./pages/About"),
     new Promise((resolve) => setTimeout(resolve, 500)), // Adds a controlled delay to suspense
   ]);
   return moduleExports;
